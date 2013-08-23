@@ -6,4 +6,6 @@ gemspec
 group :development do
   gem 'puma'
   gem 'sinatra'
+  gem 'minitest'
+  gem 'rack-test'
 end

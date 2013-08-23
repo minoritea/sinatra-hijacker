@@ -1,6 +1,6 @@
 # Sinatra::Hijacker
 
-A sinatra plugin to handle websockets.
+A sinatra plugin to handle websockets by Rack hijack API.
 
 ## Installation
 
