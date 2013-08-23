@@ -20,6 +20,19 @@ Or install it yourself as:
 
 Register Sinatra::Hijacker and define route by "websocket" method.
 
+```ruby
+require 'sinatra/hijacker'
+
+class YourApp < Sinatra::Base
+
+  register Sinatra::Hijacker
+
+  websocket '/ws' do
+    ws.onopen{ws.send_data "hello"}
+  end
+end
+```
+
 ## Contributing
 
 1. Fork it
