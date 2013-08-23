@@ -1,9 +1,10 @@
 require "sinatra/hijacker/version"
+require "tubesock"
 
 module Sinatra
   module Hijacker
+
     def call env
-      p self
       if websocket? env
         env['sinatra.hijacker.websocket'] = Tubesock.hijack(env).tap &:listen
         env['REQUEST_METHOD'] = 'WEBSOCKET'
