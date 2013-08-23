@@ -1,6 +1,6 @@
 # Sinatra::Hijacker
 
-TODO: Write a gem description
+A sinatra plugin to handle websockets.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Register Sinatra::Hijacker and define route by "websocket" method.
 
 ## Contributing
 
