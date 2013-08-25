@@ -32,4 +32,4 @@ class App < Sinatra::Base
   end
 end
 
-Rack::Handler::Puma.run App
+Rack::Handler::Puma.run App if __FILE__ == $0

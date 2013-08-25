@@ -1,4 +1,5 @@
 require "sinatra/hijacker/version"
+require "rack/hijack_wrapper"
 require "tubesock"
 
 module Sinatra
