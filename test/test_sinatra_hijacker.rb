@@ -1,6 +1,6 @@
 require 'minitest/autorun'
-#require 'rack/test'
-require 'sinatra'
+require 'rack/test'
+require 'sinatra/base'
 require 'sinatra/hijacker'
 require 'socket'
 
