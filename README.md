@@ -33,6 +33,8 @@ class YourApp < Sinatra::Base
 end
 ```
 
+Note: application server must suppert Rack hijacking API, like Puma.
+
 ## Contributing
 
 1. Fork it
