@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Sinatra::Hijacker::VERSION
   spec.authors       = ["minoritea"]
   spec.email         = ["m.tokuda@aol.jp"]
-  spec.description   = %q{A sinatra plugin to handle websockets}
-  spec.summary       = %q{Register Sinatra::Hijacker and define route by "websocket" method}
-  spec.homepage      = ""
+  spec.description   = %q{A sinatra plugin to handle websockets by Rack hijacking API}
+  spec.summary       = %q{Usage: register Sinatra::Hijacker and define route by "websocket" method}
+  spec.homepage      = "https://github.com/minoritea/sinatra-hijacker"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
