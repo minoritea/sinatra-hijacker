@@ -11,7 +11,7 @@ class App < Sinatra::Base
   
   websocket '/ws' do
     ws.onmessage do |msg|
-      ws.send_data "Hello, #{msg}"
+      ws.send_data "Hello, #{msg}!"
     end
   end
   
@@ -22,8 +22,12 @@ class App < Sinatra::Base
       <body>
       <script>
       var ws = new WebSocket('ws://#{env["HTTP_HOST"]}/ws');
-      ws.onmessage = function(msg){console.log(msg.data)};
-      ws.onopen = function(){ws.send("Minoritea")};
+      ws.onmessage = function(msg){
+        var e = document.createElement("h1");
+        e.textContent = msg.data;
+        document.body.appendChild(e);
+      };
+      ws.onopen = function(){ws.send("World")};
       </script>
       </body>
       <html>
