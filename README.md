@@ -18,9 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-Register Sinatra::Hijacker and define route by "websocket" method.
+Register Sinatra::Hijacker and define route by "websocket" method:
 
 ```ruby
+require 'sinatra'
 require 'sinatra/hijacker'
 
 class YourApp < Sinatra::Base
@@ -29,11 +30,26 @@ class YourApp < Sinatra::Base
 
   websocket '/ws' do
     ws.onopen{ws.send_data "hello"}
+    ws.onmessage{|msg| puts msg}
   end
 end
 ```
 
-Note: application server must suppert Rack hijacking API, like Puma.
+or in classic style:
+
+```ruby
+require 'sinatra'
+require 'sinatra/hijacker'
+
+register Sinatra::Hijacker
+
+websocket '/ws' do
+    ws.onopen{ws.send_data "hello"}
+    ws.onmessage{|msg| puts msg}
+end
+```
+
+Note: application server must support Rack hijacking API, like Puma.
 
 ## Contributing
 
